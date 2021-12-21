@@ -10,6 +10,7 @@
 
     <!--  skyWalking日志采集  -->
     <appender name="APM_LOG" class="org.apache.skywalking.apm.toolkit.log.logback.v1.x.log.GRPCLogClientAppender">
+<!--    <appender name="APM_LOG" class="ch.qos.logback.core.ConsoleAppender">-->
         <encoder class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
             <layout class="org.apache.skywalking.apm.toolkit.log.logback.v1.x.mdc.TraceIdMDCPatternLogbackLayout">
                 <Pattern>${APM_PATTERN}</Pattern>
@@ -33,7 +34,7 @@
 
 
     <root level="INFO">
-        <appender-ref ref="STDOUT" />
+<!--        <appender-ref ref="STDOUT" />-->
         <appender-ref ref="APM_LOG"/>
     </root>
 
